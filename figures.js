@@ -68,3 +68,21 @@ function circleArea(radius){
 // console.log("The circle's area is: " + circleArea + "cm^2");
 
 console.groupEnd();
+
+
+// Here we interact with HTML
+
+function calculateSquarePerimeter() {
+    const input = document.getElementById("SquareInput");
+    const value = input.value;
+
+    const perimeter = squarePerimeter(value);
+    alert(perimeter);
+}
+function calculateSquareArea() {
+    const input = document.getElementById("SquareInput")
+    const value = input.value;
+
+    const area = squareArea(value);
+    alert(area);
+}
