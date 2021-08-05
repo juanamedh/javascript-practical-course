@@ -39,6 +39,25 @@ function triangleArea(triangleHeight, triangleBase){
     return (triangleBase * triangleHeight) / 2;
 }
 // console.log("The triangle's area is: " + triangleArea + "cm");
+function isocelesTriangleArea(sideA, sideB, sideBase){
+    if(sideA != sideB) {
+        console.error("The sides A and B must be the same size.")
+    } else {
+    
+        const smallSideB = sideBase / 2;
+        const smallSideHipo = sideA;
+
+        const sqrSmallSideB = (smallSideB)**2;
+        const sqrSmallSideHipo = (smallSideHipo)**2;
+
+        const smallSideA = Math.sqrt(sqrSmallSideHipo - sqrSmallSideB);
+
+        const height = smallSideA;
+        const area = smallSideB * height;
+        return area;
+    }
+    
+}
 
 console.groupEnd();
 
@@ -80,9 +99,20 @@ function calculateSquarePerimeter() {
     alert(perimeter);
 }
 function calculateSquareArea() {
-    const input = document.getElementById("SquareInput")
+    const input = document.getElementById("SquareInput");
     const value = input.value;
 
     const area = squareArea(value);
+    alert(area);
+}
+function calculateTriangleArea() {
+    const input1 = document.getElementById("TriangleSideA");
+    const input2 = document.getElementById("TriangleSideB");
+    const input3 = document.getElementById("TriangleBase");
+    const sideA = input1.value;
+    const sideB = input2.value;
+    const sideBase = input3.value;
+
+    const area = isocelesTriangleArea(sideA, sideB, sideBase);
     alert(area);
 }
