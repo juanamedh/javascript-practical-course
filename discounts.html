@@ -18,14 +18,16 @@
 
         <form>
             <label for="InputPrice">Your item's full price:</label>
-            <input id="InputPrice"/>
+            <input id="InputPrice" type="number"/>
 
             <label for="InputDiscount">Your item's discount percentage:</label>
-            <input id="InputDiscount"/>
+            <input id="InputDiscount" type="number"/>
 
-            <button type="button">
+            <button type="button" onclick="onClickButtonPriceDiscount()">
                 Calculate Final Price
             </button>
+
+            <p id="FinalPrice"></p>
         </form>
     </section>
     <script src="./discounts.js"></script>
