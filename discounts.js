@@ -1,8 +1,8 @@
-const originalPrice = 100;
-const discount = 15;
-
-// const discountedPricePercentage = 100 - discount;
-// const discountedPrice = (originalPrice * discountedPricePercentage)/100;
+const coupons = [
+    "Nice_bargain",
+    "Sweet_deal",
+    "SUCH_A_STEAL",
+];
 
 function calculateDiscountedPrice(price, discount) {
     const discountedPricePercentage = 100 - discount;
