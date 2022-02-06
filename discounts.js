@@ -15,10 +15,24 @@ function onClickButtonPriceDiscount() {
     const inputPrice = document.getElementById("InputPrice");
     const priceValue = inputPrice.value;
 
-    const inputDiscount = document.getElementById("InputDiscount");
-    const discountValue = inputDiscount.value;
+    const inputCoupon = document.getElementById("InputCoupon");
+    const couponValue = inputCoupon.value;
 
-    const discountedPrice = calculateDiscountedPrice(priceValue, discountValue);
+    let discount;
+    
+    switch(couponValue) {
+        case coupons[0]:
+            discount = 15;
+        break;
+        case coupons[1]:
+            discount = 30;
+        break;
+        case coupons[2]:
+            discount = 50;
+        break;
+    }
+
+    const discountedPrice = calculateDiscountedPrice(priceValue, couponValue);
     
     const finalPrice = document.getElementById("FinalPrice");
     finalPrice.innerText = "The Discounted price is: $"  + discountedPrice;
