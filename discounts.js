@@ -32,7 +32,7 @@ function onClickButtonPriceDiscount() {
         break;
     }
 
-    const discountedPrice = calculateDiscountedPrice(priceValue, couponValue);
+    const discountedPrice = calculateDiscountedPrice(priceValue, discount);
     
     const finalPrice = document.getElementById("FinalPrice");
     finalPrice.innerText = "The Discounted price is: $"  + discountedPrice;
