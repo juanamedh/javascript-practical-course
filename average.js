@@ -1,13 +1,11 @@
-const list1 = [
-    100,
-    200,
-    300,
-    500,
-];
 
-let additionList1 = 0;
-for (let i = 0; i < list1.length; i++) {
-    additionList1 = additionList1 + list1[i];
+function computeArithmeticAverage(list) {
+    let additionList = 0;
+    for (let i = 0; i < list.length; i++) {
+    additionList = additionList + list[i];
+    }
+
+    const averageList = additionList / list.length;
+    
+    return averageList;
 }
-
-const averageList1 = additionList1 / list1.length;
