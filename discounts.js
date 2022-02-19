@@ -1,14 +1,14 @@
 const coupons = [
     {
-        name: "JuanDC_es_Batman",
+        name: "JASS_is_Batman",
         discount: 15,
     },
     {
-        name: "pero_no_le_digas_a_nadie",
+        name: "Don_tell_to_anyone",
         discount: 30,
     },
     {
-        name: "es_un_secreto",
+        name: "its_a_secret",
         discount: 25,
     },
 ];
