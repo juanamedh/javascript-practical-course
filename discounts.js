@@ -1,9 +1,17 @@
 const coupons = [
-    "Nice_bargain",
-    "Sweet_deal",
-    "SUCH_A_STEAL",
+    {
+        name: "JuanDC_es_Batman",
+        discount: 15,
+    },
+    {
+        name: "pero_no_le_digas_a_nadie",
+        discount: 30,
+    },
+    {
+        name: "es_un_secreto",
+        discount: 25,
+    },
 ];
-
 function calculateDiscountedPrice(price, discount) {
     const discountedPricePercentage = 100 - discount;
     const discountedPrice = (price * discountedPricePercentage)/100;
