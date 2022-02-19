@@ -26,24 +26,21 @@ function onClickButtonPriceDiscount() {
     const inputCoupon = document.getElementById("InputCoupon");
     const couponValue = inputCoupon.value;
 
-    let discount;
-    
-    switch(couponValue) {
-        case coupons[0]:
-            discount = 15;
-        break;
-        case coupons[1]:
-            discount = 30;
-        break;
-        case coupons[2]:
-            discount = 50;
-        break;
+    const isCouponValueValid = function (coupon) {
+        return coupon.name === couponValue
     }
 
-    const discountedPrice = calculateDiscountedPrice(priceValue, discount);
+    const userCoupon = coupons.find(isCouponValueValid);
+
+    if (!userCoupon) {
+        alert("The coupon " + couponValue + " is not valid.")
+    }else {
+        const discount = userCoupon.discount;
+        const discountedPrice = calculateDiscountedPrice(priceValue, discount);
     
-    const finalPrice = document.getElementById("FinalPrice");
-    finalPrice.innerText = "The Discounted price is: $"  + discountedPrice;
+        const finalPrice = document.getElementById("FinalPrice");
+        finalPrice.innerText = "The Discounted price is: $"  + discountedPrice;
+    }
 }
 
 // console.log({
