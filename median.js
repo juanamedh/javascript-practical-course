@@ -8,16 +8,6 @@ function computeArithmeticAverage(list) {
     return averageList;
 }
 
-const list1 = [
-    100,
-    200,
-    500,
-    800,
-    400000000,
-];
-
-const halfList1 = parseInt(list1.length / 2);
-
 function isPair(numberX) {
     if (numberX % 2 === 0) {
         return true;
@@ -26,19 +16,41 @@ function isPair(numberX) {
     }
 }
 
-let median;
-
-if (isPair(list1.length)) {
-    const element1 = list1[halfList1 - 1];
-    const element2 = list1[halfList1];
-
-    const averageElemenmts1and2 = computeArithmeticAverage([
-        element1,
-        element2,
-    ]);
-
-    median = averageElemenmts1and2;
-} else {
-    median = list1[halfList1];
-                      
+function sortList (list) {
+    list = list.sort(function(a,b) {
+        return a - b;
+    });
+    return list;
 }
+
+const list1 = [
+    100,
+    200,
+    500,
+    800,
+    400000000,
+];
+
+function computeArithmeticMedian (list) {
+    list = sortList(list);
+    const halfList = parseInt(list.length / 2);
+
+    let median;
+    
+    if (isPair(list.length)) {
+        const element1 = list[halfList - 1];
+        const element2 = list[halfList];
+    
+        const averageElemenmts1and2 = computeArithmeticAverage([
+            element1,
+            element2,
+        ]);
+    
+        median = averageElemenmts1and2;
+    } else {
+        median = list[halfList];
+                          
+    }
+    return median;
+}
+
