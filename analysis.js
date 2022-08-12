@@ -9,3 +9,7 @@ const salariesColSorted = salariesCol.sort(
         return salaryA - salaryB;
     }
 );
+
+function isPair(number) {
+    return (number % 2 === 0);
+};
