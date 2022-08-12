@@ -12,16 +12,28 @@ const list1 = [
     1,
 ];
 
-const list1Count = {};
 
-list1.map(
-    function (element) {
 
-        if(list1Count[element]) {
-            list1Count[element] += 1;
-        } else {
-            list1Count[element] = 1
+function computeArithmeticMode (list) {
+    const listCount = {};
+
+    list.map(
+        function (element) {
+    
+            if(listCount[element]) {
+                listCount[element] += 1;
+            } else {
+                listCount[element] = 1
+            }
+    
         }
-
-    }
-);
+    );
+    
+    const listArray = Object.entries(listCount).sort(
+        function (elementA, elementB) {
+            return elementA[1] - elementB[1];
+        }
+    );
+    
+    const mode = listArray[listArray.length - 1 ]    
+}
