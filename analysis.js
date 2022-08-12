@@ -25,20 +25,17 @@ function computeArithmeticAverage(list) {
 };
 
 function salariesMedian(list) {
-    const half = parseInt(list.lenght / 2);
-    
-    if (isPair(list.lenght)) {
+    const half = parseInt(list.length / 2);
+    console.log(half)
+
+    if (isPair(list.length)) {
         const personHalf1 = list[half - 1];
         const personHalf2 = list[half];
 
         const median = computeArithmeticAverage([personHalf1, personHalf2]);
         return median;
     } else {
-        const personHalf = list[half];
-        return personHalf;
-    }
+        const median = list[half];
+        return median;
+   }
 };
-
-console.log(
-    salariesMedian(salariesColSorted)
-    );
