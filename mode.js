@@ -35,5 +35,6 @@ function computeArithmeticMode (list) {
         }
     );
     
-    const mode = listArray[listArray.length - 1 ]    
+    const mode = listArray[listArray.length - 1 ] 
+    return mode;   
 }
