@@ -26,8 +26,7 @@ function computeArithmeticAverage(list) {
 
 function salariesMedian(list) {
     const half = parseInt(list.length / 2);
-    console.log(half)
-
+    
     if (isPair(list.length)) {
         const personHalf1 = list[half - 1];
         const personHalf2 = list[half];
