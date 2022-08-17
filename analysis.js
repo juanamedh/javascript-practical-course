@@ -1,15 +1,4 @@
-const salariesCol = colombia.map(
-    function(person) {
-        return person.salary;
-    }
-);
-
-const salariesColSorted = salariesCol.sort(
-    function (salaryA, salaryB) {
-        return salaryA - salaryB;
-    }
-);
-
+//Helpers
 function isPair(number) {
     return (number % 2 === 0);
 };
@@ -24,9 +13,17 @@ function computeArithmeticAverage(list) {
     return averageList;
 };
 
+const salariesCol = colombia.map(
+    function(person) {
+        return person.salary;
+    }
+);
+
+
+//Median Calculator
 function salariesMedian(list) {
     const half = parseInt(list.length / 2);
-    
+
     if (isPair(list.length)) {
         const personHalf1 = list[half - 1];
         const personHalf2 = list[half];
@@ -38,3 +35,10 @@ function salariesMedian(list) {
         return median;
    }
 };
+
+//General Median
+const salariesColSorted = salariesCol.sort(
+    function (salaryA, salaryB) {
+        return salaryA - salaryB;
+    }
+);
