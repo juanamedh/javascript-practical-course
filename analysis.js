@@ -54,3 +54,7 @@ const top10SalariesCol =  salariesColSorted.splice(
 );
 const top10MedianCol = salariesMedian(top10SalariesCol);
 
+console.log({
+    generalMedianCol,
+    top10MedianCol,
+});
