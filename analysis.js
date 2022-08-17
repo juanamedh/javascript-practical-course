@@ -44,3 +44,13 @@ const salariesColSorted = salariesCol.sort(
 );
 
 const generalMedianCol = salariesMedian(salariesColSorted);
+
+// Top 10% Median
+const spliceStart = parseInt((salariesColSorted.length / 100) * 90);
+const spliceCount = salariesColSorted.length - spliceStart;
+const top10SalariesCol =  salariesColSorted.splice(
+    spliceStart,
+    spliceCount,
+);
+const top10MedianCol = salariesMedian(top10SalariesCol);
+
