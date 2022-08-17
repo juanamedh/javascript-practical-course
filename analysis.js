@@ -42,3 +42,5 @@ const salariesColSorted = salariesCol.sort(
         return salaryA - salaryB;
     }
 );
+
+const generalMedianCol = salariesMedian(salariesColSorted);
